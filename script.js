@@ -133,6 +133,40 @@ function hiddenallvaule3(a){
  }
 }
 
+let quantitys = document.querySelector('#quantitys');
+let eachprice = document.querySelector('#eachprice');
+let popcardcontainer = document.querySelector('#popcardcontainer');
+let cardshowprice = document.querySelector('#cardshowprice');
+let cardquantity = document.querySelector('#cardquantity');
+let total = document.querySelector('#total');
+let totalvalueforcartbutton = document.querySelector('#totalvalueforcartbutton');
+ 
+function qvalue(a){
+    let vluess = quantitys.innerHTML;
+    vluess = vluess * 1;
+          if( a == 1){
+            quantitys.innerHTML = vluess + a; 
+          }
+          if( (a == -1) && (vluess > 0)){
+            quantitys.innerHTML = vluess + a;  
+          }
+}
+//===================
+function addtocart(){
+    let vlues = quantitys.innerHTML;
+    let cardshowvls = eachprice.innerHTML;
+    cardshowvls = cardshowvls * 1;
+
+    vlues = vlues * 1;
+    if(vlues > 0){
+        totalvalueforcartbutton.innerHTML = vlues;
+        cardshowprice.innerHTML = cardshowvls;
+        cardquantity.innerHTML = vlues;
+        total.innerHTML = vlues *  cardshowvls;
+    }else{
+        totalvalueforcartbutton.innerHTML = ""; 
+    }
+}
 
 
 

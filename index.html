@@ -30,20 +30,21 @@
   <div class=" flex items-center relative">
     <div class=" mr-5 relative" >
       <img src="./images/icon-cart.svg" alt="cartImage">
-        <span id="totalcart" class=" absolute -top-2 -right-2 px-1 py-0  text-xs text-gray-200 bg-orange-500 rounded-full">3</span> 
+        <span id="totalvalueforcartbutton" class=" absolute -top-2 -right-2 px-1 py-0  text-xs text-gray-200 bg-orange-500 rounded-full"></span> 
     </div>
     <div class=" w-10  h-10 rounded-full  hover:ring-orange-500 hover:ring-2"><img src="./images/image-avatar.png" alt="cartImage"></div>
-   
-    <section class="  absolute top-14 right-0 w-80  flex flex-col shadow-2xl p-4 ">
-       <p class=" text-lg font-bold">Cart </p>   
-     <div class=" flex flex-col">
-       <div class=" flex ">
+  <!--  top popup cart card -->
+    <section class="h-40 rounded-lg  absolute top-14 right-0 w-64  flex flex-col shadow-2xl p-4 ">
+       <p class=" text-lg font-bold">Cart </p>  
+       <hr>  
+     <div id="popcardcontainer" class=" flex flex-col">
+       <div class=" flex justify-between items-center mt-3">
           <div class="  w-10">
             <img class=" w-full" src="./images/image-product-1.jpg" alt="product">
           </div>
           <div >
-            <p> asdfasdfas aDFASDF</p>
-            <p><span id="price">$125</span>x <span id="quantity">3</span> <span id="total">= 375</span></p>
+            <p class=" text-xs font-bold text-orange-500">SNEAKER COMPANY</p>
+            <p class=" font-bold text-sm text-gray-700">$<span id="cardshowprice"> 125</span>x <span id="cardquantity">3</span> =  $ <span id="total">375</span></p>
           
           </div>
           <div>
@@ -51,9 +52,10 @@
             </svg>
           </div>      
        </div>
-       <div> <p> Checkout </p></div>
+       <div class=" bg-orange-500 mt-2 p-1 flex justify-center items-center font-bold text-gray-200 rounded-md" > <p> Checkout </p></div>
      </div>
     </section> 
+    <!--  top popup cart card End -->
 
   </div>
   </nav>
@@ -112,18 +114,18 @@
   <p class=" text-sm text-gray-500 mt-7">These low-profile sneakers are your perfect casual wear companion. Featuring a 
     durable rubber outer sole, they’ll withstand everything the weather can offer.
   </p>
-  <p class=" text-xl font-bold mt-5">$ <span>125.00</span> <span class=" px-1 bg-gray-200  rounded-lg text-sm text-orange-500"> 50%</span></p>
+  <p class=" text-xl font-bold mt-5">$ <span id="eachprice"> 125.00</span> <span class=" px-1 bg-gray-200  rounded-lg text-sm text-orange-500"> 50%</span></p>
    <p class=" text-sm font-bold text-gray-300 "> $ <del>250.00 </del></p>
   
    <div class="mt-5 flex items-center justify-between">
  
     <div class="p-2 flex items-center justify-between bg-gray-300 rounded-md"> 
-      <div class=" px-2 "> <img src="./images/icon-minus.svg" alt="icon"></div>
-        <p class=" px-6 border-x border-gray-400">0</p>
-      <div class=" px-2 "><img src="./images/icon-plus.svg" alt="icon"></div>
+      <div class=" px-2 "> <img src="./images/icon-minus.svg" alt="icon" onclick=" qvalue(-1)"></div>
+        <p id="quantitys" class=" px-6 border-x border-gray-400">0</p>
+      <div class=" px-2 "><img src="./images/icon-plus.svg" alt="icon" onclick=" qvalue(1)"></div>
   </div>
 
-  <p class=" flex items-center bg-orange-500 text-xl  font-semibold md:px-5 lg:px-10 py-2 rounded-lg text-gray-200">
+  <p class=" flex items-center bg-orange-500 text-xl  font-semibold md:px-5 lg:px-10 py-2 rounded-lg text-gray-200" onclick="addtocart()">
     <svg class="" width="22" height="20" xmlns="http://www.w3.org/2000/svg">
       <path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="white" fill-rule="nonzero"/>
     </svg> &nbsp;  Add to cart</p>
