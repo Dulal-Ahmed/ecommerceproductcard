@@ -6,7 +6,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./dist/output.css">
-  <title>Frontend Mentor | E-commerce product page</title>
+  <title> E-commerce product page</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -32,11 +32,14 @@
       <img src="./images/icon-cart.svg" alt="cartImage">
         <span id="totalvalueforcartbutton" class=" absolute -top-2 -right-2 px-1 py-0  text-xs text-gray-200 bg-orange-500 rounded-full"></span> 
     </div>
-    <div class=" w-10  h-10 rounded-full  hover:ring-orange-500 hover:ring-2"><img src="./images/image-avatar.png" alt="cartImage"></div>
+    <div id="profileimg" class=" w-10  h-10 rounded-full  hover:ring-orange-500 hover:ring-2"><img src="./images/image-avatar.png" alt="cartImage"></div>
   <!--  top popup cart card -->
-    <section class="h-40 rounded-lg  absolute top-14 right-0 w-64  flex flex-col shadow-2xl p-4 ">
+    <section id="toppopup" class="h-40 rounded-lg  absolute top-14 right-0 w-64  flex flex-col shadow-2xl p-4 ">
        <p class=" text-lg font-bold">Cart </p>  
        <hr>  
+       <div id="emptydiv" class="h-full flex  justify-center w-full items-center font-semibold text-gray-700">
+         <p> Your Card is empty !!!!!!</p>
+       </div>
      <div id="popcardcontainer" class=" flex flex-col">
        <div class=" flex justify-between items-center mt-3">
           <div class="  w-10">
@@ -48,7 +51,7 @@
           
           </div>
           <div>
-            <svg width="14" height="16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M0 2.625V1.75C0 1.334.334 1 .75 1h3.5l.294-.584A.741.741 0 0 1 5.213 0h3.571a.75.75 0 0 1 .672.416L9.75 1h3.5c.416 0 .75.334.75.75v.875a.376.376 0 0 1-.375.375H.375A.376.376 0 0 1 0 2.625Zm13 1.75V14.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 1 14.5V4.375C1 4.169 1.169 4 1.375 4h11.25c.206 0 .375.169.375.375ZM4.5 6.5c0-.275-.225-.5-.5-.5s-.5.225-.5.5v7c0 .275.225.5.5.5s.5-.225.5-.5v-7Zm3 0c0-.275-.225-.5-.5-.5s-.5.225-.5.5v7c0 .275.225.5.5.5s.5-.225.5-.5v-7Zm3 0c0-.275-.225-.5-.5-.5s-.5.225-.5.5v7c0 .275.225.5.5.5s.5-.225.5-.5v-7Z" id="a"/></defs><use fill="#C3CAD9" fill-rule="nonzero" xlink:href="#a"/>
+            <svg id="deletproduct" width="14" height="16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M0 2.625V1.75C0 1.334.334 1 .75 1h3.5l.294-.584A.741.741 0 0 1 5.213 0h3.571a.75.75 0 0 1 .672.416L9.75 1h3.5c.416 0 .75.334.75.75v.875a.376.376 0 0 1-.375.375H.375A.376.376 0 0 1 0 2.625Zm13 1.75V14.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 1 14.5V4.375C1 4.169 1.169 4 1.375 4h11.25c.206 0 .375.169.375.375ZM4.5 6.5c0-.275-.225-.5-.5-.5s-.5.225-.5.5v7c0 .275.225.5.5.5s.5-.225.5-.5v-7Zm3 0c0-.275-.225-.5-.5-.5s-.5.225-.5.5v7c0 .275.225.5.5.5s.5-.225.5-.5v-7Zm3 0c0-.275-.225-.5-.5-.5s-.5.225-.5.5v7c0 .275.225.5.5.5s.5-.225.5-.5v-7Z" id="a"/></defs><use fill="#C3CAD9" fill-rule="nonzero" xlink:href="#a"/>
             </svg>
           </div>      
        </div>

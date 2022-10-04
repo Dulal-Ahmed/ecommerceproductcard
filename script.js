@@ -140,6 +140,10 @@ let cardshowprice = document.querySelector('#cardshowprice');
 let cardquantity = document.querySelector('#cardquantity');
 let total = document.querySelector('#total');
 let totalvalueforcartbutton = document.querySelector('#totalvalueforcartbutton');
+let emptydiv = document.querySelector('#emptydiv');
+let deletproduct = document.querySelector('#deletproduct');
+let toppopup = document.querySelector('#toppopup');
+let profileimg = document.querySelector('#profileimg');
  
 function qvalue(a){
     let vluess = quantitys.innerHTML;
@@ -163,10 +167,28 @@ function addtocart(){
         cardshowprice.innerHTML = cardshowvls;
         cardquantity.innerHTML = vlues;
         total.innerHTML = vlues *  cardshowvls;
+        popcardcontainer.style.display = "flex";
+        emptydiv.style.display = "none";
     }else{
         totalvalueforcartbutton.innerHTML = ""; 
+        popcardcontainer.style.display = "none";
+        emptydiv.style.display = "flex";
     }
 }
+deletproduct.addEventListener('click',()=>{
 
-
+    popcardcontainer.style.display = "none";
+    emptydiv.style.display = "flex";
+    totalvalueforcartbutton.innerHTML = "";
+    cardshowprice.innerHTML =  "";
+    cardquantity.innerHTML = "";
+    total.innerHTML = "";
+})
+profileimg.onclick = ()=>{
+     if(toppopup.style.display ==  "flex"){
+        toppopup.style.display =  "none"
+     }else {
+        toppopup.style.display = "flex";
+     }
+}
 
