@@ -192,3 +192,13 @@ profileimg.onclick = ()=>{
      }
 }
 
+
+let triborder = document.querySelector('#triborder');
+let navCrossed = document.querySelector('#mobilemenus');
+function navCrosse(){
+    navCrossed.style.display = "none";
+}
+
+triborder.onclick = ()=>{
+    navCrossed.style.display = "flex";
+}
